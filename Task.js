@@ -5,7 +5,7 @@ function Task(difficulty, urgency, reward) {
 }
 
 Task.prototype.prettyPrint = function() {
-  return "Task: " + this.difficulty + ", Urgency: " + this.urgency + ", Reward: " + this.reward
+  return "Difficulty: " + this.difficulty + ", Urgency: " + this.urgency + ", Reward: " + this.reward
 }
 
 module.exports = Task;

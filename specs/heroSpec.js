@@ -6,9 +6,14 @@ var Food = require("../Food.js");
 
 describe("Hero tests", function() {
 
-  var Hero;
-  var Task;
-  var Food;
+  var hero;
+  var eatLazania;
+  var enjoyLife;
+  var learnJS;
+  var lazania;
+  var apple;
+  var iceCream;
+
 
   beforeEach("Setup", function(){
     hero = new Hero("Lenia", 30, "lazania");
@@ -33,8 +38,9 @@ describe("Hero tests", function() {
 
   it("Should be able to list the tasks", function() {
     hero.addTask(eatLazania);
-    hero.hasTask(eatLazania);
-    assert.equal("Difficulty: 20, Urgency 30, Reward 50", hero.hasTask());
+    hero.addTask(learnJS);
+    hero.doTask(eatLazania);
+    assert.equal("Difficulty: 40, Urgency: 40, Reward: 35", hero.listTasks());
   });
 
 

@@ -1,9 +1,13 @@
 function Hero(name, health, favFood) {
   this.name = name;
   this.health = health;
-  this.fav_food = fav_food;
+  this.favFood = favFood;
   this.tasks = [];
   this.completed = [];
+}
+
+Hero.prototype.canTalk = function(){
+  return "My name is " + this.name ;
 }
 
 Hero.prototype.addTask = function(task) {
@@ -12,9 +16,9 @@ Hero.prototype.addTask = function(task) {
 
 Hero.prototype.listTasks = function() {
   var tasksList = this.tasks.map(function(task) {
-    return task.prettyPrint()
+    return task.prettyPrint();
   })
-  return tasksList
+  return tasksList[0];
 }
 
 Hero.prototype.doTask= function(taskToDo) {
